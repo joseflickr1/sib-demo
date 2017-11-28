@@ -93,5 +93,6 @@
     "webpack": "3.7.1",
     "webpack-copy-plugin": "0.0.4",
     "webpack-dev-server": "2.9.2"
+
   }
 }
