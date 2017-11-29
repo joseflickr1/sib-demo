@@ -1,0 +1,78 @@
+.paginering {
+    display: flex;
+    align-items: center;
+}
+
+.paginering__knapper {
+    float: right;
+}
+
+.paginering__knapp {
+    border: none;
+    background: none;
+
+    .panel-mixin();
+    .panel-focushover-mixin();
+
+    display: inline-block;
+    padding: 0.25rem;
+    border-radius: 0;
+
+    &:hover {
+        box-shadow: none;
+    }
+
+    &:first-child {
+        border-top-left-radius: @border-radius-base;
+        border-bottom-left-radius: @border-radius-base;
+    }
+
+    &:last-child {
+        border-top-right-radius: @border-radius-base;
+        border-bottom-right-radius: @border-radius-base;
+    }
+
+    &:not(:last-child) {
+        margin-right: 0.25rem;
+    }
+
+    &.disabled {
+        pointer-events: none;
+        cursor: default;
+        color: @toolbarInactiveTextColor;
+    }
+}
+
+.visningsgruppe {
+    display: inline-flex;
+
+    input {
+        height: 0;
+        width: 0;
+        opacity: 0;
+    }
+    label {
+        background-color: @white;
+        display: inline-block;
+        padding: 0.3rem 0.5rem;
+        border: 1px solid @navGra20;
+    }
+
+    &__knapp {
+        &:first-child label {
+            border-bottom-left-radius: 2px;
+            border-top-left-radius: 2px;
+        }
+
+        &:last-child label {
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+        }
+
+        input:checked + label {
+            background-color: @navBla;
+            color: @white;
+            border-color: @navBla;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+.veiledere-side {
+    margin-bottom: 100px;
+}
+
+.veiledere-tabell {
+    border-collapse: collapse;
+
+    th {
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    a.sortering-link {
+        border-bottom: none;
+        cursor: pointer;
+    }
+}
+
+.veiledersok__wrapper {
+    margin-top: 1rem;
+    width: 25%;
+    margin-right:75%;
+    .veiledere__soketabell {
+        a {
+            border-bottom: none;
+            color: @blue-interaction;
+            text-decoration: none;
+        }
+    }
+
+}
+
+.tildelveileder_wrapper {
+    min-height: 3rem;
+}
+.veileder__hide {
+    display:none;
+}
+
+.veileder-tabell {
+    tbody, thead:not(.extra-head) {
+
+        th,td {
+            border-bottom: 1px solid #b7b1a9;
+            border-top: none;
+            font-weight: normal;
+
+            &:first-child {
+                width: 15rem;
+                white-space: pre-wrap;
+            }
+            &:nth-child(2) {
+                width: 5rem;
+                white-space: pre-wrap;
+            }
+            &:nth-child(3) {
+                width: 8rem;
+                white-space: pre-wrap;
+            }
+        }
+    }
+
+    .extra-head  th, td {
+        border-bottom: 1px solid #b7b1a9;
+    }
+}
